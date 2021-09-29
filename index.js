@@ -17,9 +17,7 @@ app.get("/", (req, res) => {
 app.get("/api/resources/:id", (req, res) => {
   const resources = getResources();
   const { id } = req.params;
-  console.log(req.params)
   const resource = resources.find(resource => resource.id === id);
-  console.log(resource)
   res.send(resource);
 })
 
